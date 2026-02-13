@@ -1,0 +1,113 @@
+/* Mobile Responsiveness Improvements */
+
+@media (max-width: 768px) {
+
+    /* General Layout */
+    .app-container {
+        padding-bottom: 80px;
+        /* Space for potential bottom nav or just breathing room */
+    }
+
+    /* Header */
+    header {
+        padding: 0.75rem 1rem !important;
+    }
+
+    header h2 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Hamburger Menu Logic */
+    .mobile-menu-btn {
+        display: block !important;
+        color: var(--pk-text-main);
+    }
+
+    /* Hide Desktop Nav in Mobile */
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+
+
+    /* Stats Grid: Stack cards vertically */
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Tables: Horizontal Scroll */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1rem;
+        border-radius: var(--pk-radius);
+        border: 1px solid var(--pk-border);
+    }
+
+    table {
+        min-width: 600px;
+        /* Ensure table doesn't squash too much */
+    }
+
+    /* Cards */
+    .card {
+        padding: 1rem !important;
+    }
+
+    /* Form layouts: Stack grid columns */
+    .flex.justify-between,
+    .flex.gap-4,
+    div[style*="grid-template-columns: 1fr 1fr"],
+    div[style*="grid-template-columns: 1fr 1.5fr"] {
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Adjust Modal width */
+    .modal {
+        width: 90% !important;
+        max-width: none !important;
+        margin: 1rem;
+    }
+
+    /* Employee Dashboard specific */
+    .status-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* 2 columns for status buttons */
+    }
+
+    /* Hide some non-essential table columns on very small screens if needed, 
+     but horizontal scroll is usually safer for data tables. */
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjustments for phones */
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stack actions in table if possible or just rely on scroll */
+    .flex.gap-2 {
+        flex-wrap: wrap;
+    }
+
+    /* Status selection on Attendance Form */
+    .status-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
