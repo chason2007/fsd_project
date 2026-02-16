@@ -119,13 +119,15 @@ function Header() {
 
     return (
         <header style={{
-            background: 'var(--pk-surface)',
-            borderBottom: '1px solid var(--pk-border)',
-            boxShadow: 'var(--pk-shadow)',
+            background: 'var(--bg-surface)',
+            borderBottom: '1px solid var(--border-color)',
+            boxShadow: 'var(--shadow-md)',
             padding: '1rem 2rem',
             position: 'sticky',
             top: 0,
-            zIndex: 40
+            zIndex: 40,
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)'
         }}>
             <div style={{
                 maxWidth: '1400px',
